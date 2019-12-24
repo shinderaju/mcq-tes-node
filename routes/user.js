@@ -4,34 +4,39 @@ const auth = require('../middleware/auth');
 
 const router = express.Router();
 
-router.post('/users', async (req, res) => {
+router.post('/register', async (req, res) => {
     // Create a new user
     try {
-        const user = new User(req.body)
-        await user.save()
-        const token = await user.generateAuthToken()
-        res.status(201).send({ user, token })
+        const user = new User(req.body);
+        console.log('user1');
+        // await user.save();
+        console.log('user2', user);
+        const token = await user.generateAuthToken();
+        user.tokens = token;
+        await user.save();
+        res.status(201).send({ token })
     } catch (error) {
-        console.log('respond with a resourceadasdsda')
-        res.status(400).send(error)
+        console.log('respond with a resourceadasdsda', error)
+        res.status(422).send('Email is invalid or already taken');
     }
 })
 
-router.post('/users/login', async(req, res) => {
+router.post('/login', async(req, res) => {
     //Login a registered user
     try {
         const { email, password } = req.body;
+        console.log('req.body', email, password);
         const user = await User.findByCredentials(email, password);
-        console.log('findByCredentials', user);
         if (!user) {
             return res.status(401).send({error: 'Login failed! Check authentication credentials'})
         }
         const token = await user.generateAuthToken();
+        user.save();
         console.log('user', user);
         console.log('token', token);
-        res.send({ user, token })
+        res.send({ token })
     } catch (error) {
-        res.status(400).send(error)
+        res.status(401).send({error: 'Login failed! Check authentication credentials'})
     }
 
 })
@@ -41,7 +46,7 @@ router.get('/users/me', auth, async(req, res) => {
     res.send(req.user)
 })
 
-router.post('/users/me/logout', auth, async (req, res) => {
+router.post('/users/logout', auth, async (req, res) => {
     // Log user out of the application
     try {
         req.user.tokens = req.user.tokens.filter((token) => {
@@ -54,4 +59,14 @@ router.post('/users/me/logout', auth, async (req, res) => {
     }
 })
 
+router.get('/getAllCanditates',auth, async(req, res) => {
+    const user = req.user;
+    console.log('admin', user);
+    if (user.role.toLowerCase() == 'admin') {
+        const allCandidate = await User.find({role: 'student'}, {name:1,email:1,userTest:1});
+        res.send(allCandidate);
+    } else {
+        res.status(401).send({ error: 'Not authorized to access this resource' })
+    }
+})
 module.exports = router

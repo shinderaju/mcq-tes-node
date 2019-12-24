@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4319a937-b6e4-4292-9559-ca6cb97a3421" name="Default Changelist" comment="" />
+    <list default="true" id="4319a937-b6e4-4292-9559-ca6cb97a3421" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/question.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/question.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/test.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/test.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VHluUtkv3mzdMp6xhxhAffu8ma" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -16,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sampleApp" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -58,7 +73,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576918123040</updated>
-      <workItem from="1576918124301" duration="12845000" />
+      <workItem from="1576918124301" duration="13478000" />
+      <workItem from="1577074687498" duration="472000" />
+      <workItem from="1577084481832" duration="19658000" />
+      <workItem from="1577162843570" duration="24469000" />
     </task>
     <servers />
   </component>
@@ -70,25 +88,33 @@
       <screen x="0" y="27" width="1920" height="1010" />
     </state>
     <state x="693" y="280" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1010@0.27.1920.1010" timestamp="1576931500960" />
-    <state width="1897" height="338" key="GridCell.Tab.0.bottom" timestamp="1576930013149">
+    <state x="743" y="289" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577104532272">
       <screen x="0" y="27" width="1920" height="1010" />
     </state>
-    <state width="1897" height="338" key="GridCell.Tab.0.bottom/0.27.1920.1010@0.27.1920.1010" timestamp="1576930013148" />
-    <state width="1897" height="338" key="GridCell.Tab.0.center" timestamp="1576930013148">
+    <state x="743" y="289" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1010@0.27.1920.1010" timestamp="1577104532272" />
+    <state width="1897" height="309" key="GridCell.Tab.0.bottom" timestamp="1577191454482">
       <screen x="0" y="27" width="1920" height="1010" />
     </state>
-    <state width="1897" height="338" key="GridCell.Tab.0.center/0.27.1920.1010@0.27.1920.1010" timestamp="1576930013148" />
-    <state width="1897" height="338" key="GridCell.Tab.0.left" timestamp="1576930013148">
+    <state width="1897" height="309" key="GridCell.Tab.0.bottom/0.27.1920.1010@0.27.1920.1010" timestamp="1577191454482" />
+    <state width="1897" height="309" key="GridCell.Tab.0.center" timestamp="1577191454482">
       <screen x="0" y="27" width="1920" height="1010" />
     </state>
-    <state width="1897" height="338" key="GridCell.Tab.0.left/0.27.1920.1010@0.27.1920.1010" timestamp="1576930013148" />
-    <state width="1897" height="338" key="GridCell.Tab.0.right" timestamp="1576930013148">
+    <state width="1897" height="309" key="GridCell.Tab.0.center/0.27.1920.1010@0.27.1920.1010" timestamp="1577191454482" />
+    <state width="1897" height="309" key="GridCell.Tab.0.left" timestamp="1577191454481">
       <screen x="0" y="27" width="1920" height="1010" />
     </state>
-    <state width="1897" height="338" key="GridCell.Tab.0.right/0.27.1920.1010@0.27.1920.1010" timestamp="1576930013148" />
-    <state x="608" y="267" width="704" height="528" key="find.popup" timestamp="1576930293812">
+    <state width="1897" height="309" key="GridCell.Tab.0.left/0.27.1920.1010@0.27.1920.1010" timestamp="1577191454481" />
+    <state width="1897" height="309" key="GridCell.Tab.0.right" timestamp="1577191454482">
       <screen x="0" y="27" width="1920" height="1010" />
     </state>
-    <state x="608" y="267" width="704" height="528" key="find.popup/0.27.1920.1010@0.27.1920.1010" timestamp="1576930293812" />
+    <state width="1897" height="309" key="GridCell.Tab.0.right/0.27.1920.1010@0.27.1920.1010" timestamp="1577191454482" />
+    <state x="608" y="267" width="704" height="528" key="find.popup" timestamp="1577186888426">
+      <screen x="0" y="27" width="1920" height="1010" />
+    </state>
+    <state x="608" y="267" width="704" height="528" key="find.popup/0.27.1920.1010@0.27.1920.1010" timestamp="1577186888426" />
+    <state x="623" y="247" width="672" height="678" key="search.everywhere.popup" timestamp="1577102328426">
+      <screen x="0" y="27" width="1920" height="1010" />
+    </state>
+    <state x="623" y="247" width="672" height="678" key="search.everywhere.popup/0.27.1920.1010@0.27.1920.1010" timestamp="1577102328426" />
   </component>
 </project>

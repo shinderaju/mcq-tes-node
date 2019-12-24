@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var QuestionSchema = new mongoose.Schema({
     question: String,
-    choices: Array,
+    options: Array,
     answer: Number
 });
 

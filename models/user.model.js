@@ -23,14 +23,16 @@ const userSchema = mongoose.Schema({
     password: {
         type: String,
         required: true,
-        minLength: 7
+        minLength: 8
     },
-    tokens: [{
-        token: {
+    role: {
+        type: String,
+        required: true,
+    },
+    tokens: {
             type: String,
             required: true
-        }
-    }],
+        },
     userTest: [{
         testId: {
             type: mongoose.Schema.Types.ObjectId,
@@ -38,14 +40,16 @@ const userSchema = mongoose.Schema({
         },
         userAns:[
             {
-                question: {
-                    type: mongoose.Schema.Types.ObjectId,
-                    ref: 'QuestionSchema'
-                },
-                ans: Number
+                result: Boolean,
+                ansOption: Number
             }
-            ]
-    }]
+            ],
+        obtainedMarks:Number,
+        totalMarks:Number,
+        correct:Number,
+        wrong:Number
+    }],
+    currentTest: mongoose.Schema.Types.ObjectId
 })
 
 userSchema.pre('save', async function (next) {
@@ -59,15 +63,10 @@ userSchema.pre('save', async function (next) {
 
 userSchema.methods.generateAuthToken = async function() {
     // Generate an auth token for the user
-    console.log('generateAuthToken1');
     const user = this;
-    console.log('generateAuthToken2');
-    const token = jwt.sign({_id: user._id}, 'process.env.JWT_KEY');
-    console.log('generateAuthToken3');
-    user.tokens = user.tokens.concat({token});
-    console.log('generateAuthToken4');
-    await user.save();
-    console.log('generateAuthToken5');
+    const token = jwt.sign({_id: user._id, role: user.role}, 'process.env.JWT_KEY');
+    user.tokens = token;
+    // await user.save();
     return token
 }
 
